@@ -1,0 +1,1293 @@
+
+<DiameterDictionaryConfiguration>
+
+<!-- The following AVPs are from RFC 4006 , Diameter Credit Control Application !-->
+
+    <AVP>
+           <Code>411</Code>
+           <Name>CC-Correlation-ID</Name>
+           <DataType>OctetString</DataType>
+           <FlagActions>
+		   <M_Flag>clear</M_Flag>
+		   <P_Flag>clear</P_Flag>
+	   </FlagActions>
+  	   <FlagRules>
+ 		   <M_Flag>may</M_Flag>
+  		   <P_Flag>may</P_Flag>
+ 	   </FlagRules>
+	   <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>412</Code>
+           <Name>CC-Input-Octets</Name>
+           <DataType>Unsigned64</DataType>
+           <FlagActions>
+		   <M_Flag>set</M_Flag>
+		   <P_Flag>clear</P_Flag>
+	   </FlagActions>
+  	   <FlagRules>
+ 		   <M_Flag>must</M_Flag>
+  		   <P_Flag>may</P_Flag>
+ 	   </FlagRules>
+	   <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>413</Code>
+           <Name>CC-Money</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>414</Code>
+           <Name>CC-Output-Octets</Name>
+           <DataType>Unsigned64</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>415</Code>
+           <Name>CC-Request-Number</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>416</Code>
+           <Name>CC-Request-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>417</Code>
+           <Name>CC-Service-Specific-Units</Name>
+           <DataType>Unsigned64</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>418</Code>
+           <Name>CC-Session-Failover</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>419</Code>
+           <Name>CC-Sub-Session-Id</Name>
+           <DataType>Unsigned64</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>420</Code>
+           <Name>CC-Time</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>421</Code>
+           <Name>CC-Total-Octets</Name>
+           <DataType>Unsigned64</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>454</Code>
+           <Name>CC-Unit-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+		   <M_Flag>set</M_Flag>
+		   <P_Flag>clear</P_Flag>
+	   </FlagActions>
+  	   <FlagRules>
+ 		   <M_Flag>must</M_Flag>
+  		   <P_Flag>may</P_Flag>
+ 	   </FlagRules>
+	   <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>422</Code>
+           <Name>Check-Balance-Result</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>423</Code>
+           <Name>Cost-Information</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>424</Code>
+           <Name>Cost-Unit</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>426</Code>
+           <Name>Credit-Control</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>427</Code>
+           <Name>Credit-Control-Failure-Handling</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>425</Code>
+           <Name>Currency-Code</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>428</Code>
+           <Name>Direct-Debiting-Failure-Handling</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>429</Code>
+           <Name>Exponent</Name>
+           <DataType>Integer32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>449</Code>
+           <Name>Final-Unit-Action</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>430</Code>
+           <Name>Final-Unit-Indication</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+		   <M_Flag>set</M_Flag>
+		   <P_Flag>clear</P_Flag>
+	   </FlagActions>
+  	   <FlagRules>
+ 		   <M_Flag>must</M_Flag>
+  		   <P_Flag>may</P_Flag>
+ 	   </FlagRules>
+	   <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>431</Code>
+           <Name>Granted-Service-Unit</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>453</Code>
+           <Name>G-S-U-Pool-Identifier</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>457</Code>
+           <Name>G-S-U-Pool-Reference</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>456</Code>
+           <Name>Multiple-Services-Credit-Control</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>455</Code>
+           <Name>Multiple-Services-Indicator</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>432</Code>
+           <Name>Rating-Group</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>433</Code>
+           <Name>Redirect-Address-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>434</Code>
+           <Name>Redirect-Server</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>435</Code>
+           <Name>Redirect-Server-Address</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>436</Code>
+           <Name>Requested-Action</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+		   <M_Flag>set</M_Flag>
+		   <P_Flag>clear</P_Flag>
+	   </FlagActions>
+  	   <FlagRules>
+ 		   <M_Flag>must</M_Flag>
+  		   <P_Flag>may</P_Flag>
+ 	   </FlagRules>
+	   <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>437</Code>
+           <Name>Requested-Service-Unit</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>438</Code>
+           <Name>Restriction-Filter-Rule</Name>
+           <DataType>OctetString</DataType>  <!-- TODO!! Have to Change Type to IPFilterRule when available !!!! -->
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>461</Code>
+           <Name>Service-Context-Id</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>439</Code>
+           <Name>Service-Identifier</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>440</Code>
+           <Name>Service-Parameter-Info</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>clear</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>may</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>441</Code>
+           <Name>Service-Parameter-Type</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>clear</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>may</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>442</Code>
+           <Name>Service-Parameter-Value</Name>
+           <DataType>OctetString</DataType>
+           <FlagActions>
+           <M_Flag>clear</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>may</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>443</Code>
+           <Name>Subscription-Id</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>444</Code>
+           <Name>Subscription-Id-Data</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>450</Code>
+           <Name>Subscription-Id-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+		   <M_Flag>set</M_Flag>
+		   <P_Flag>clear</P_Flag>
+	   </FlagActions>
+  	   <FlagRules>
+ 		   <M_Flag>must</M_Flag>
+  		   <P_Flag>may</P_Flag>
+ 	   </FlagRules>
+	   <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>452</Code>
+           <Name>Tariff-Change-Usage</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>451</Code>
+           <Name>Tariff-Change-Time</Name>
+           <DataType>Time</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>445</Code>
+           <Name>Unit-Value</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>446</Code>
+           <Name>Used-Service-Unit</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>458</Code>
+           <Name>User-Equipment-Info</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>clear</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>may</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>459</Code>
+           <Name>User-Equipment-Info-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>clear</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>may</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>460</Code>
+           <Name>User-Equipment-Info-Value</Name>
+           <DataType>OctetString</DataType>
+           <FlagActions>
+           <M_Flag>clear</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>may</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>447</Code>
+           <Name>Value-Digits</Name>
+           <DataType>Integer64</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <AVP>
+           <Code>448</Code>
+           <Name>Validity-Time</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+    <!-- The following AVPs are specified in 3GPP TS 32299-830 !-->
+
+    <AVP>
+           <Code>873</Code>
+           <Name>Service-Information</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>879</Code>
+           <Name>PoC-Information</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+    <AVP>
+           <Code>883</Code>
+           <Name>PoC-Server-Role</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>884</Code>
+           <Name>PoC-Session-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>1252</Code>
+           <Name>PoC-User-Role</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>1277</Code>
+           <Name>PoC-Session-Initiation-type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>2025</Code>
+           <Name>PoC-Event-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>885</Code>
+           <Name>Number-Of-Participants</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>887</Code>
+           <Name>Participants-Involved</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>1260</Code>
+           <Name>Participant-Group</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>1255</Code>
+           <Name>Talk-Burst-Exchange</Name>
+           <DataType>Grouped</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>858</Code>
+           <Name>PoC-Controlling-Address</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>859</Code>
+           <Name>PoC-Group-Name</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>1229</Code>
+           <Name>PoC-Session-Id</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+        <AVP>
+           <Code>857</Code>
+           <Name>Charged-Party</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+     <AVP>
+           <Code>1253</Code>
+           <Name>PoC-User-Role-IDs</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+     <AVP>
+           <Code>1254</Code>
+           <Name>PoC-User-Role-info-Units</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+     <AVP>
+           <Code>832</Code>
+           <Name>Called-Party-Address</Name>
+           <DataType>UTF8String</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+         <AVP>
+           <Code>1259</Code>
+           <Name>Participant-Access-Priority</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+         <AVP>
+           <Code>1279</Code>
+           <Name>User-Participating-Type</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+         <AVP>
+           <Code>1262</Code>
+           <Name>PoC-Change-Time</Name>
+           <DataType>Time</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+         <AVP>
+           <Code>1283</Code>
+           <Name>Number-Of-Talk-Bursts</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+         <AVP>
+           <Code>1287</Code>
+           <Name>Talk-Burst-Volume</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+         <AVP>
+           <Code>1286</Code>
+           <Name>Talk-Burst-Time</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+         <AVP>
+           <Code>1282</Code>
+           <Name>Number-Of-Received-Talk-Bursts</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+         <AVP>
+           <Code>1285</Code>
+           <Name>Received-Talk-Burst-Volume</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+         <AVP>
+           <Code>1284</Code>
+           <Name>Received-Talk-Burst-Time</Name>
+           <DataType>Unsigned32</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+
+         <AVP>
+           <Code>1261</Code>
+           <Name>PoC-Change-Condition</Name>
+           <DataType>Enumerated</DataType>
+           <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>
+
+    <AVP>
+       <Code>2020</Code>
+       <Name>Low-Balance-Indication</Name>
+       <DataType>Enumerated</DataType>
+       <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>no</IsGrouped>
+    </AVP>   
+
+    <AVP>
+       <Code>2021</Code>
+       <Name>Remaining-Balance</Name>
+       <DataType>Grouped</DataType>
+       <FlagActions>
+           <M_Flag>set</M_Flag>
+           <P_Flag>clear</P_Flag>
+       </FlagActions>
+       <FlagRules>
+           <M_Flag>must</M_Flag>
+           <P_Flag>may</P_Flag>
+       </FlagRules>
+       <VendorID>10415</VendorID>
+       <IsGrouped>yes</IsGrouped>
+    </AVP>   
+
+</DiameterDictionaryConfiguration>
