@@ -1,0 +1,6 @@
+#ifndef ONLINECS_H
+#define	ONLINECS_H
+
+#define	OCS_MAX_NUM_INTERNAL_EVENTS				20
+#define	OCS_MAX_NUM_EXTERNAL_EVENTS 			20
+#endif //#ifndef ONLINECS_H

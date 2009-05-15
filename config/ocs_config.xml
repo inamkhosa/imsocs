@@ -1,0 +1,197 @@
+ <DiameterServerConfiguration>
+
+<HostName>ocs.advanced-ims.test</HostName>
+
+<HostIPAddress>127.0.0.1</HostIPAddress>
+
+<HostRealm>advanced-ims.test</HostRealm>
+
+<TcTimerVal>1234</TcTimerVal>
+
+<ProductName>Online Charging Server</ProductName>
+
+<VendorID>776655</VendorID>
+
+<LogFileName>/root/diamlog.txt</LogFileName>
+
+<LogLevel>31</LogLevel>
+
+<Listeners>
+
+    <ListenerInfo>
+           <TransportType>TCP</TransportType>
+           <TransportDetails>
+               <IPAddress>192.168.0.125</IPAddress>
+               <Port>3868</Port>
+               <FQDN>ocs.advanced-ims.test</FQDN>
+               <IpAddrType>IPV4</IpAddrType>
+           </TransportDetails>
+    </ListenerInfo>
+
+</Listeners>
+
+<MiscModules>
+
+    <!--> Add any module infos here which are common to all applications in current server -->
+    <ModuleInfo>
+        <ModuleName>ratingfunc</ModuleName>
+        <ModuleFilePath>/RatingFunc_Module/</ModuleFilePath>
+        <IsPathAbsolute>no</IsPathAbsolute>
+        <LoadModule>yes</LoadModule>
+    </ModuleInfo>
+
+    
+    <ModuleInfo>
+        <ModuleName>onlinecharg_db</ModuleName>
+        <ModuleFilePath>/DB_Module/</ModuleFilePath>
+        <IsPathAbsolute>no</IsPathAbsolute>
+        <LoadModule>no</LoadModule>
+    </ModuleInfo>
+
+</MiscModules>
+
+<DatabaseModuleConfig>
+
+   <ModuleInfo>
+        <ModuleName>onlinecharg_db</ModuleName>
+        <ModuleFilePath>/DB_Module/</ModuleFilePath>
+        <IsPathAbsolute>no</IsPathAbsolute>
+        <LoadModule>yes</LoadModule>
+     </ModuleInfo>
+
+     <DBMS_Configuration>
+         <HostName>127.0.0.1</HostName>
+         <UserName>root</UserName>
+         <Password>advims</Password>
+         <DatabaseName>adv_hss</DatabaseName>
+     </DBMS_Configuration>
+
+</DatabaseModuleConfig>
+
+<DiameterApplication>
+
+    <ApplicationName>OCF</ApplicationName>
+
+    <AppModules>
+
+        <ModuleInfo>
+            <ModuleName>ocf</ModuleName>
+            <ModuleFilePath>/OCF_Module/</ModuleFilePath>
+            <IsPathAbsolute>no</IsPathAbsolute>
+	    <LoadModule>yes</LoadModule>
+        </ModuleInfo>
+
+    </AppModules>
+
+    <DiameterStackParams>
+
+        <ApplicationInfo>
+            <ApplicationID>4</ApplicationID>
+            <ApplicationType>Authorization</ApplicationType>
+<!--            <VendorID>10415</VendorID>-->
+        </ApplicationInfo>
+
+    <DictionaryFile>
+        <FilePathAndName>ocs_dictionary.xml</FilePathAndName>
+        <IsPathAbsolute>no</IsPathAbsolute>
+    </DictionaryFile>
+
+
+    <PeerTableEntries>
+
+        <PeerInfo>
+            <HostIdentity>seagull.ims.hpintelco.org</HostIdentity>
+            <Role>initiator</Role>
+            <IPAddress>127.0.0.1</IPAddress>
+            <Port>3873</Port>
+            <WatchDogSupport>no</WatchDogSupport>
+            <WatchDogTimerDelay>30</WatchDogTimerDelay>
+        </PeerInfo>
+        
+        <PeerInfo>
+            <HostIdentity>client.ims.hpintelco.org</HostIdentity>
+            <Role>initiator</Role>
+            <IPAddress>127.0.0.1</IPAddress>
+            <Port>3873</Port>
+            <WatchDogSupport>no</WatchDogSupport>
+            <WatchDogTimerDelay>30</WatchDogTimerDelay>
+        </PeerInfo>
+                
+<!--        
+        <PeerInfo>
+            <HostIdentity>seagull1.ims.hpintelco.org</HostIdentity>
+            <Role>initiator</Role>
+            <IPAddress>127.0.0.1</IPAddress>
+            <Port>3873</Port>
+            <WatchDogSupport>no</WatchDogSupport>
+            <WatchDogTimerDelay>30</WatchDogTimerDelay>
+        </PeerInfo>
+-->
+        <PeerInfo>
+            <HostIdentity>192.168.0.201</HostIdentity>
+            <Role>responder</Role>
+            <IPAddress>127.0.0.1</IPAddress>
+            <Port>3870</Port>
+            <WatchDogTimerDelay>30</WatchDogTimerDelay>
+        </PeerInfo>
+
+        <PeerInfo>
+            <HostIdentity>scscf.open-ims.test</HostIdentity>
+            <Role>responder</Role>
+            <IPAddress>127.0.0.1</IPAddress>
+            <Port>3869</Port>
+            <WatchDogTimerDelay>30</WatchDogTimerDelay>
+        </PeerInfo>
+
+        <PeerInfo>
+            <HostIdentity>ocs1.open-ims.test</HostIdentity>
+            <Role>initiator</Role>
+            <IPAddress>127.0.0.1</IPAddress>
+            <Port>3871</Port>
+            <WatchDogSupport>no</WatchDogSupport>
+            <WatchDogTimerDelay>10</WatchDogTimerDelay>
+        </PeerInfo>
+<!--
+        <PeerInfo>
+            <HostIdentity>ocs2.open-ims.test</HostIdentity>
+            <Role>initiator</Role>
+            <IPAddress>127.0.0.1</IPAddress>
+            <Port>3872</Port>
+            <WatchDogSupport>no</WatchDogSupport>
+            <WatchDogTimerDelay>30</WatchDogTimerDelay>
+        </PeerInfo>
+-->
+    </PeerTableEntries>
+
+    <RealmTableEntries>
+
+        <RealmInfo>
+            <RealmName>seagull</RealmName>
+            <ApplicationID>4</ApplicationID>
+            <LocalAction>proxy</LocalAction>
+            <Server>
+                <Priority>1</Priority>
+                <ServerID>ocs1.open-ims.test</ServerID>
+            </Server>
+            <Server>
+                <Priority>2</Priority>
+                <ServerID>ocs2.open-ims.test</ServerID>
+            </Server>            
+        </RealmInfo>
+
+        <RealmInfo>
+            <RealmName>open-ims.test</RealmName>
+            <ApplicationID>4</ApplicationID>
+            <LocalAction>local</LocalAction>
+        </RealmInfo>
+
+    </RealmTableEntries>
+
+    
+    </DiameterStackParams>
+
+    
+</DiameterApplication>
+
+
+</DiameterServerConfiguration>
