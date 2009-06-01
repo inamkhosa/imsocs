@@ -4,9 +4,9 @@ h_sources = ratingfunc.h
 
 c_sources = ratingfunc.c
 
-INCLUDES = -I. -I$(top_srcdir)/src $(LIBAMPS_DEPS_CFLAGS) $(top_srcdir)/src $(LIBXML_DEPS_CFLAGS) $(DIAMETER_DEPS_CFLAGS) $(DIAMAPPCOMMON_DEPS_CFLAGS)
+INCLUDES = -I. -I$(top_srcdir)/src -I$(top_srcdir)/include/amps -I$(top_srcdir)/include/libxml2 $(DIAMETER_DEPS_CFLAGS) $(DIAMAPPCOMMON_DEPS_CFLAGS)
 
-LDADD = $(DIAMETER_DEPS_LIBS) $(DIAMAPPCOMMON_DEPS_LIBS) $(LIBXML_DEPS_LIBS)
+LDADD = $(DIAMETER_DEPS_LIBS) $(DIAMAPPCOMMON_DEPS_LIBS) -L/usr/local/lib -lxml2 -lamps
 
 AM_CFLAGS = -DDATADIR=\"$(datadir)/@PACKAGE@/\" -DLIBDIR=\"$(libdir)/\"
 
